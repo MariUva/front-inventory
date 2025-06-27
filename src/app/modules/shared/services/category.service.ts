@@ -10,8 +10,13 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * get all categries
+   * @returns 
+   */
   getCategories() {
 
-    const endpoint = '${base_url}/categories'
+    const endpoint = '${base_url}/categories';
+    return this.http.get(endpoint);
   }
 }
